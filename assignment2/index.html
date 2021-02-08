@@ -47,14 +47,20 @@
         smoothCount="10"
         smoothTolerance=".01"
         smoothThreshold="5">
+	      
+	  <a-entity>
+              <a-assets>
+                        <video id="vid" src="video.mp4"></video>
+                          </a-assets>
 
+ 
+
+                      <a-video src="#vid"></a-video>
           </a-entity>
-           <a-assets>
-    <video id="vid" src="video.mp4"></video>
-  </a-assets>
 
-  <a-video src="#vid"></a-video>
- </a-scene>
+      </a-nft>
+      <a-entity camera></a-entity>
+    </a-scene>
 	 
   </body>
 
