@@ -39,7 +39,9 @@
       renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-
+  <a-assets>
+                        <video id="vid" src="video.mp4"></video>
+                          </a-assets>
       <a-nft
         type="nft"
         url="assignment2/logo"
@@ -49,9 +51,6 @@
         smoothThreshold="5">
 	      
 	  <a-entity>
-              <a-assets>
-                        <video id="vid" src="video.mp4"></video>
-                          </a-assets>
                       <a-video src="#vid"></a-video>
           </a-entity>
 
