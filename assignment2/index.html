@@ -39,9 +39,6 @@
       renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-  <a-assets>
-                        <video id="vid" src="video.mp4"></video>
-                          </a-assets>
       <a-nft
         type="nft"
         url="assignment2/logo"
@@ -54,8 +51,10 @@
                       <a-video src="#vid"></a-video>
           </a-entity>
 
-      </a-nft>
-      <a-entity camera></a-entity>
+<a-box position="-100 10 0" rotation="" color="red" shadow="" material="" geometry="" scale="50 5 50"></a-box>
+            <a-box position="10 100 0" rotation="" color="red" shadow="" material="" geometry="" scale="50 5 50"></a-box>
+            <a-box position="100 10 0" rotation="" color="red" shadow="" material="" geometry="" scale="50 5 50"></a-box>
+            <a-box position="-100 10 -150" rotation="" color="red" shadow="" material="" geometry="" scale="50 5 50"></a-box>      <a-entity camera></a-entity>
     </a-scene>
 	  
 	</body>
