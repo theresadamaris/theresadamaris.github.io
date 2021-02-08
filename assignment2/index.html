@@ -49,15 +49,17 @@
         smoothThreshold="5">
 
           <a-entity>
-            
-            <a-box position="-100 10 0" src="logo.jpg" rotation="" color="" shadow="" material="" geometry="" scale="50 5 50"></a-box>
-            <a-box position="10 100 0" src="logo.jpg" rotation="" color="" shadow="" material="" geometry="" scale="50 5 50"></a-box>
-          </a-entity>
+           <a-assets>
+    <video id="vid" src="video.mp4"></video>
+  </a-assets>
+
+  <a-video src="#vid"></a-video>
 
       </a-nft>
 
       <a-entity camera></a-entity>
     </a-scene>
+	  
 
   </body>
 
