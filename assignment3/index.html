@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>Aframe Ar</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <style type="text/css">
+    	#information {
+    		position: fixed;
+    		top: 20%;
+    		left: 10%;
+    		width: 80%;
+    		height: 30%;
+    		background-color: rgba(225,225,0.7);
+    		border-radius: 20px;
+    		text-align: center;
+    		padding-top: 10%;
+    	}
+</style>
+</head>
+<body>
+<a-scene> 
+       
+	<a-entity camera position="0 0 0" look-controls wasd-controls>
+		<a-cursor fuse=true fuseTimeout="500" ></a-cursor>
+	</a-entity>
+
+	<a-box id="top_box" color="red" position="0 2 -5"></a-box>
+
+	<a-sky src="room.jpeg"></a-sky>  
+</a-scene>
+
+<div id="information" style="display: none;" onclick="document.querySelector('#information').style.display = 'none';">
+	<h1> Master Bedroom</h1>
+	<h3> Welcome!</h3>
+</div>
+
+<script>
+var top_box = document.querySelector('#top_box');
+	
+top_box.addEventListener('fusing', function (evt) {
+	var check = document.querySelector('#information').style.display;
+	if (check == 'none') {
+		document.querySelector('#information').style.display = 'block';
+    } else {
+   		document.querySelector('#information').style.display = 'none';
+    }
+
+});
+</script>
+ 
+</body>
+</html>
